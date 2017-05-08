@@ -1,6 +1,6 @@
 package org.launchcode.controllers;
 
-import org.launchcode.models.data.CategoryDAO;
+import org.launchcode.models.data.CategoryDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,7 +13,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("category")
 public class CategoryController {
     @Autowired
-    private CategoryDAO categoryDao;
+    private CategoryDao categoryDao;
 
     // Request path: /category
     @RequestMapping(value = "")
