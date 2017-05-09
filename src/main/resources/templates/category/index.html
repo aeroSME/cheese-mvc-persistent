@@ -7,8 +7,8 @@
 <h1 th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
-    <ul th:each="cat : ${categories}">
-        <td th:text="${cat.name}"></td>
+    <ul th:each="cate : ${categories}">
+        <td th:text="${cate.name}"></td>
     </ul>
 <a href="/category/add">Add a Category</a>
 </body>
