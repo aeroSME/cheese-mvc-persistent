@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
 <head th:replace="fragments :: head"></head>
-
 <body class="container">
-
 <h1 th:text="${title}">Default Title</h1>
 
 <nav th:replace="fragments :: navigation"></nav>
-<P></P>
-    <ul th:each="cate : ${categories}">
-        <td th:text="${cate.name}"></td>
+<p></p>
+    <ul th:each="menu : ${menus}">
+        <li>
+        <a th:href="'/menu/view/' + ${menu.id}" th:text="${menu.name}"></a>
+        <!--<td th:text="${menu.name}"></td>-->
+        </li>>
     </ul>
+<p><a href="/menu/add">Add Menu</a> </p>
 
-<a href="/category/add">Add a Category</a>
 </body>
 </html>
